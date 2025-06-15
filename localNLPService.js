@@ -14,6 +14,7 @@ const SKILLS_DB = {
   ]
 };
 
+
 // Initialize NLP tools
 const tokenizer = new natural.WordTokenizer();
 const stemmer = natural.PorterStemmer;
