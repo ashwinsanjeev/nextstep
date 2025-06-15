@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextStep - Smart Job Matching</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>NextStep</h1>
+            <p>Upload your resume and discover perfect job matches on LinkedIn</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="upload-section">
+            <h2>Upload Your Resume</h2>
+            <p>We support PDF, DOCX, and TXT formats</p>
+            <input type="file" id="resume-upload" accept=".pdf,.docx,.txt" style="display: none;">
+            <button class="upload-btn" onclick="document.getElementById('resume-upload').click()">Choose File</button>
+            <div id="file-name">No file selected</div>
+            <button class="upload-btn" id="analyze-btn" style="display: none;">Analyze Resume</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Analyzing your resume and finding matching jobs...</p>
+        </div>
+
+        <div class="results" id="results">
+            <div class="skills-section">
+                <h2>Skills Identified</h2>
+                <div id="skills-container"></div>
+            </div>
+
+            <div class="jobs-section">
+                <h2>Recommended LinkedIn Jobs</h2>
+                <div id="jobs-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="error-section" id="error-section"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
