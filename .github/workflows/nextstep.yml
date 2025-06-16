@@ -35,5 +35,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu
+            # Generate .env file from secret
+            echo "${{ secrets.ENV_CONTENT }}" > .env
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nextstep-app:latest
             sudo docker-compose -f docker-compose1.yaml up -d
