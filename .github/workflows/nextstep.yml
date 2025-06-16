@@ -36,4 +36,4 @@ jobs:
           script: |
             cd /home/ubuntu
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nextstep-app:latest
-            sudo docker compose -f docker-compose1.yaml up -d
+            sudo docker-compose -f docker-compose1.yaml up -d
