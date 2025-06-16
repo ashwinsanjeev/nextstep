@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:  # 👈 This enables the manual run button
+
 
 jobs:
   build-push-deploy:
@@ -29,8 +31,8 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
+          username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nextstep-app:latest
-            docker run -d --name nextstep-app -p 5501:5501 ${{ secrets.DOCKERHUB_USERNAME }}/nextstep-app:latest
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nextstep-app:latest
+            sudo docker run -d --name nextstep-app -p 5501:5501 ${{ secrets.DOCKERHUB_USERNAME }}/nextstep-app:latest
