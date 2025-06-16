@@ -11,7 +11,8 @@ RUN npm install
 # Copy all source files
 COPY . .
 
-EXPOSE 5501
+EXPOSE 5000
 
 # Start the server (assuming app.js is your main server file)
-CMD ["npm", "run", "dev"]
+CMD ["node", "app.js"]
+

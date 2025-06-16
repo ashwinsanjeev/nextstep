@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'http://52.66.132.71:5000';
 
 // DOM Elements
 const resumeUpload = document.getElementById('resume-upload');

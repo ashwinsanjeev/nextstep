@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  backend:
+    image: ashwinsanjeev/nextstep-app:latest
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "8030:80"
+    volumes:
+      - .:/usr/share/nginx/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - backend
+
