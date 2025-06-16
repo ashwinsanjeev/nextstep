@@ -36,7 +36,7 @@ jobs:
           script: |
             cd /home/ubuntu
             git clone https://github.com/ashwinsanjeev/nextstep.git
-            cd /nextstep
+            cd nextstep
             # Generate .env file from secret
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nextstep-app:latest
             sudo docker-compose -f docker-compose1.yaml up -d
