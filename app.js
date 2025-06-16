@@ -9,7 +9,8 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:8030', 'http://127.0.0.1:8030'], // Your frontend URL
+  origin: ['http://52.66.132.71:8030'] 
+  // ['http://localhost:8030', 'http://127.0.0.1:8030'], // Your frontend URL
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
   credentials: true,
