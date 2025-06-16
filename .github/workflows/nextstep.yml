@@ -34,5 +34,6 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            cd /home/ubuntu
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nextstep-app:latest
-            sudo docker run -d --name nextstep-app -p 5501:5501 ${{ secrets.DOCKERHUB_USERNAME }}/nextstep-app:latest
+            sudo docker-compose1.yaml up -d
