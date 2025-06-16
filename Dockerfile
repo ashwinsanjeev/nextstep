@@ -14,4 +14,4 @@ COPY . .
 EXPOSE 5501
 
 # Start the server (assuming app.js is your main server file)
-CMD ["node", "app.js"]
+CMD ["npm", "run", "dev"]
