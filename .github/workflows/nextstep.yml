@@ -38,7 +38,7 @@ jobs:
             rm -rf nextstep
             git clone https://github.com/ashwinsanjeev/nextstep.git
             cd nextstep
-            echo "API_KEY=${{ secrets.API_KEY }}" > .env
+            echo "DEEPSEEK_API_KEY=${{ secrets.DEEPSEEK_API_KEY }}" > .env
             sudo docker-compose down
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nextstep-app:latest
             sudo docker-compose -f docker-compose.yaml up -d
