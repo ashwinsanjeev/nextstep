@@ -28,8 +28,6 @@ exports.searchJobs = async (skills = []) => {
         'X-RapidAPI-Host': 'jsearch.p.rapidapi.com',
       },
     });
-
-    console.log("📥 JSearch raw response:", response.data);
     if (!response.data.data || response.data.data.length === 0) {
   console.warn("⚠️ No job results returned from JSearch.");
 }
