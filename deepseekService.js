@@ -17,6 +17,8 @@ Respond in JSON format like:
   "soft": ["Leadership", "Communication"]
 }
 `;
+    console.log("DEEPSEEK KEY====>", DEEPSEEK_API_KEY);
+    
 
     const response = await axios.post(
       'https://openrouter.ai/api/v1/chat/completions',
